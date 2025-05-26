@@ -114,7 +114,10 @@ TPST is a text-based speaker alignment algorithm that enables cross-system compa
 
 1. **Word Error Rate (WER)**  
    Measures word-level transcription accuracy using Levenshtein alignment  
-   \(\text{WER} = \frac{S + D + I}{N}\)
+   ```
+   WER = (S + D + I) / N
+   ```
+   where:
    - S: Substitutions
    - D: Deletions
    - I: Insertions
@@ -122,7 +125,9 @@ TPST is a text-based speaker alignment algorithm that enables cross-system compa
 
 2. **Speaker Error Rate (SER)**  
    Measures token-level speaker attribution errors  
-   \(\text{SER} = \frac{\text{\#(correct word, wrong speaker)}}{\text{\# correct words}}\)
+   ```
+   SER = #(correct word, wrong speaker) / # correct words
+   ```
    - Focuses on speaker labeling accuracy
    - Independent of transcription quality
    - Uses TPST for fair comparison
