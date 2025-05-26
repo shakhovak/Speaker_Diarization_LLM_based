@@ -22,15 +22,18 @@ A key focus of this research is testing **how well large language models (LLMs) 
 ## Repository Structure
 
 ```
-.
-├── pyannote_aligned.py      # Main diarization implementation
-├── word_level_metric.py     # TPST algorithm and metric calculations
-├── timestamp_metric.py      # DER calculations and RTTM conversion
-├── word_level_analysis.py   # Analysis utilities
-├── utils.py                 # Common utility functions
-├── requirements.txt         # Project dependencies
-└── data/                    # Example data directory
-    └── README.md           # Data format documentation
+Speaker_Diarization_LLM_based/
+├── src/                    # Core implementation files
+│   ├── pyannote_aligned.py    # PyAnnote-based diarization implementation
+│   ├── word_level_metric.py   # TPST algorithm and metric calculations
+│   ├── timestamp_metric.py    # DER calculations and RTTM conversion
+│   └── utils.py              # Common utility functions
+├── data/                   # Example data directory (empty, as per privacy requirements)
+├── examples/              # Example scripts (to be added if needed)
+├── README.md             # Main documentation
+├── requirements.txt      # Project dependencies
+├── .gitignore           # Git ignore rules
+└── LICENSE              # MIT License
 ```
 
 ## Setup
