@@ -39,6 +39,7 @@ results/
 # Proprietary components
 gpt_engine_*.py
 gpt_4.py
+word_level_analysis.py
 
 # IDE
 .vscode/
