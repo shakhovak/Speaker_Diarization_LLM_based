@@ -95,6 +95,11 @@ TPST is a text-based speaker alignment algorithm that enables cross-system compa
    - Handles insertions, deletions, and substitutions
    - Preserves word order and context
 
+       
+    ![image](https://github.com/user-attachments/assets/b0d74e45-43d5-47b8-a821-ac2adea6c0ef)
+
+
+
 2. **Speaker Co-occurrence Analysis**
    - Counts speaker label pairs on matched tokens
    - Identifies consistent speaker mappings
