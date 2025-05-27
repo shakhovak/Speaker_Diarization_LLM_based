@@ -156,7 +156,7 @@ TPST is a text-based speaker alignment algorithm that enables cross-system compa
 | Approach                        | Input   | Pipeline Components                                                |
 |---------------------------------|---------|--------------------------------------------------------------------|
 | **API**                         | Mono mp3 files   | Provider ASR + built-in diarizer                                   |
-| **PyAnnote Align (stereo/mono)**| Stereo/Mono oracle transcripts, mono mp3 for pyannote | PyAnnote VAD → embeddings → clustering → TPST                      |
+| **PyAnnote Align (stereo/mono)**| Stereo/Mono oracle transcripts, mono mp3 for pyannote | PyAnnote VAD → embeddings → clustering    |
 | **GPT-Only (v1/v2)**            | Stereo/Mono oracle transcripts   | Oracle transcript → GPT-4 prompted to segment & label speakers     |
 | **GPT API Correction**          | API result | API output → GPT relabel & boundary smoothing                      |
 
@@ -233,12 +233,6 @@ save_der_statistics(
    - Significant DER (>45%)
    - GPT post-processing shows modest improvements
    - Room for optimization in speaker attribution
-
-4. **Base Comparison**
-   - Stereo-based approaches generally outperform mono
-   - Mono-based methods show higher WER
-   - GPT correction more effective on stereo inputs
-   - Trade-off between accuracy and processing complexity
 
 ## Technical Implementation
 
