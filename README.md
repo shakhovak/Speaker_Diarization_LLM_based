@@ -59,10 +59,8 @@ Speaker_Diarization_LLM_based/
 The project uses a structured approach to file organization and processing:
 
 - **File Structure**
-  - `stereo_transcriptions/`: Contains stereo-based JSON files with word-level timing
-  - `mono_transcriptions/`: Contains mono-based JSON files
-  - `metrics/`: Stores experiment results and evaluation metrics
-  - `experiments/`: Contains configuration files for different experimental setups
+  - `stereo_transcriptions/`: Contains stereo-based JSON files with word-level timing and speaker attribution
+  - `mono_transcriptions/`: Contains mono-based JSON files with word-level timing
 
 - **JSON Format**
   ```json
@@ -161,8 +159,8 @@ TPST is a text-based speaker alignment algorithm that enables cross-system compa
 | Approach                        | Input   | Pipeline Components                                                |
 |---------------------------------|---------|--------------------------------------------------------------------|
 | **API**                         | Mono mp3 files   | Provider ASR + built-in diarizer                                   |
-| **PyAnnote Align (stereo/mono)**| Stereo/Mono oracle transcripts, mono mp3 for pyannote | PyAnnote VAD → embeddings → clustering    |
-| **GPT-Only (v1/v2)**            | Stereo/Mono oracle transcripts   | Oracle transcript → GPT-4 prompted to segment & label speakers     |
+| **PyAnnote Align (stereo/mono)**| Stereo/Mono transcripts, mono mp3 for pyannote | PyAnnote VAD → embeddings → clustering    |
+| **GPT-Only (v1/v2)**            | Stereo/Mono transcripts   | Transcript → GPT-4 prompted to segment & label speakers     |
 | **GPT API Correction**          | API result | API output → GPT relabel & boundary smoothing                      |
 
 ## Usage
